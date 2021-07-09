@@ -1,10 +1,23 @@
-import { ApiProperty } from "@nestjs/swagger";
+import { Body } from "@nestjs/common/decorators";
+import { ApiProperty, ApiQuery, ApiTags } from "@nestjs/swagger";
+import { Empleados } from "./empleados.interface";
 
 export class EmpleadosDTO {
+  
+    @ApiProperty()
+    Nombre: string;
+
+    @ApiProperty()
+    Apellidos: string;
+
+    @ApiProperty()
+    Genero: string;
+
+    @ApiProperty()
+    Edad: number;
+
+    @ApiProperty()
+    telefono: number;
     
-    readonly Nombre: string;
-    readonly Apellidos: string;
-    readonly Genero: string;
-    readonly Edad: number;
-    readonly telefono: number;
+   
 }
