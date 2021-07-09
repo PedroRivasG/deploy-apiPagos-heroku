@@ -20,8 +20,8 @@ export class EmpleadosController {
     }
     @ApiQuery({name: 'Id'})
     @Get()
-    ObtenerUno(@Param('id') id):Promise<Empleados[]> {
-        return this.servicio.todos();
+    ObtenerUno(@Param('id') id):Promise<Empleados> {
+        return this.servicio.uno(id);
     }
 
     @Post()

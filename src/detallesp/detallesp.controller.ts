@@ -17,8 +17,8 @@ export class DetallespController {
     }
   
     @Get()
-    ObtenerUno(@Param('id') id): Promise<Detallesp[]> {
-      return this.servicio.todos();
+    ObtenerUno(@Param('id') id): Promise<Detallesp> {
+      return this.servicio.uno(id);
     }
    
     @Post()
